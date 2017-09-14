@@ -2,16 +2,17 @@
 using namespace std;
 
 template <class H> class bubbleSort{
-  H array[10];
+  H *array;
   int dim,start,end;
   H addElement(int x);
   void swap(int i,int j);
 public:
-  bubbleSort(){
-    dim=10;
+  bubbleSort(int dim){
+    this.dim=dim;
     start=0;
     end=dim-1;
-    for(int i=0; i<dim; i++)
+    array=new H(); 
+    for(int i=0; i<this.dim; i++)
       array[i]=addElement(i);
 
   }
@@ -46,11 +47,4 @@ template <class H> H bubbleSort<H>::addElement(int x){
   cout<<"Add a new element n."<<x+1<<" @> ";
   cin>>temp;
   return  temp;;
-}
-
-int main(){
-  bubbleSort<int> *x=new bubbleSort<int>();
-  x->stamp();
-  x->sort();
-  x->stamp();
 }
