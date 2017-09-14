@@ -2,16 +2,17 @@
 using namespace std;
 
 template <class H> class selectionSort{
-  H array[10];
+  H *array;
   int dim,start,end;
   H addElement(int x);
   void swap(int i,int j);
 public:
-  selectionSort(){
-    dim=10;
+  selectionSort(int dim){
+    this.dim=dim;
     start=0;
-    end=dim-1;
-    for(int i=0; i<dim; i++)
+    end=this.dim-1;
+    array=new H();
+    for(int i=0; i<this.dim; i++)
       array[i]=addElement(i);
 
   }
@@ -48,11 +49,3 @@ template <class H> H selectionSort<H>::addElement(int x){
   cin>>temp;
   return  temp;;
 }
-
-int main(){
-  selectionSort<int> *x=new selectionSort<int>();
-  x->stamp();
-  x->sort();
-  x->stamp();
-}
-
