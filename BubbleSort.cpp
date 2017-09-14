@@ -20,7 +20,7 @@ public:
 };
 
 template <class H> void bubbleSort<H>::sort(){
-  for(int ult=dim-1;end>0;end--){
+  for(;end>0;end--){
     for(int i=0;i<end;i++){
       if(array[i]>array[i+1])
         swap(i,i+1);
