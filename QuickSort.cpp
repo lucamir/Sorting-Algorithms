@@ -32,7 +32,7 @@ template <class H> void quickSort<H>::quick(int top,int bottom){
 }
 
 template <class H> int quickSort<H>::partition(int top,int bottom){
-	int x=array[top];
+	H x=array[top];
 	int i=top-1;
     int j=bottom+1;
     do {
@@ -51,7 +51,7 @@ template <class H> void quickSort<H>::stamp(){
 }
 
 template <class H> void quickSort<H>::swap(int i,int j){
-  int tmp=array[i];
+  H tmp=array[i];
   array[i]=array[j];
   array[j]=tmp;
 }
