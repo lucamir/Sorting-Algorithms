@@ -37,7 +37,7 @@ template <class H> void bubbleSort<H>::stamp(){
 }
 
 template <class H> void bubbleSort<H>::swap(int i,int j){
-  int tmp=array[i];
+  H tmp=array[i];
   array[i]=array[j];
   array[j]=tmp;
 }
