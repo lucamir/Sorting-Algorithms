@@ -8,11 +8,11 @@ template <class H> class bubbleSort{
   void swap(int i,int j);
 public:
   bubbleSort(int dim){
-    this.dim=dim;
+    this->dim=dim;
     start=0;
-    end=this.dim-1;
+    end=this->dim-1;
     array=new H(); 
-    for(int i=0; i<this.dim; i++)
+    for(int i=0; i<this->dim; i++)
       array[i]=addElement(i);
 
   }
