@@ -38,7 +38,7 @@ template <class H> void selectionSort<H>::stamp(){
 }
 
 template <class H> void selectionSort<H>::swap(int i,int j){
-  int tmp=array[i];
+  H tmp=array[i];
   array[i]=array[j];
   array[j]=tmp;
 }
